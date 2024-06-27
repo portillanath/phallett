@@ -3,7 +3,7 @@
 blastpor=0.75
 evalue=1e-5
 file="~/phallett/GCF_000836945.fasta"
-updatedb="false"
+updatedb="true"
 
 while getopts "fl:bp:e:u" opt; do
   case $opt in
