@@ -8,9 +8,11 @@
 1. You must have anaconda or miniconda, if that is not the case follow the next link: 
 https://shorturl.at/ZDEL0
 
-3. Clone this repo: `git clone https://github.com/portillanath/phallett.git `
+2. Clone this repo: `git clone https://github.com/portillanath/phallett.git 
 
-2. Set up depedencies throught conda enviroment `bash enviroments.sh`
+3. Move inside the repo folder: cd phallett
+
+4. Set up depedencies throught conda enviroment `bash enviroments.sh`
 
 ## It is a executive wrap 🌯
 The structure of phallett are based on modules, each module is a exacutable work of tool or analysis. By default all the workflow is execute if there is not sumministed any module name `bash phallet.sh`
