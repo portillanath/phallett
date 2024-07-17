@@ -1,6 +1,7 @@
 #!/bin/bash
 #Default argument values 
-data_default=~/phallett/test_genus.txt
+script_dir=$(dirname "$0")
+data_default=$(cat "$script_dir/test_genus.txt")
 module=""
 kmersmash=(7 9 11 12 13)
 genus=""
@@ -12,7 +13,8 @@ my="mash"
 mx="ani"
 blastpor=0.75
 evalue=1e-5
-file="~/phallett/GCF_000836945.fasta"
+data_default=$(cat "$script_dir/test_genus.txt")
+file=$(cat "$script_dir/GCF_000836945.fasta")
 updatedb=false
 
 conda activate enviroments 
@@ -70,27 +72,27 @@ done
 
 #Run phallet steps with flags
 if [ -z "$module" ]; then
-  bash ~/phallett/src/00.ICTV_Metadata_Resource.sh
-  bash ~/phallett/src/01.Taxa_Curation_Level.sh $data_default
-  bash ~/phallett/src/02.Mash_Metrics.sh $kmersmash $genus
-  bash ~/phallett/src/03.ANI_Metrics.sh $kmersani $genus $frag_lengths
-  bash ~/phallett/src/04.wraggling.sh $kmersx $kmersy $my $mx
-  bash ~/phallett/src/05.Graphing.sh $kmersx $kmersy $my $mx
+  bash "$script_dir/src/00.ICTV_Metadata_Resource_Resource.sh"
+  bash "$script_dir/src/01.Taxa_Curation_Level.sh" $data_default
+  bash "$script_dir/src/02.Mash_Metrics.sh" $kmersmash $genus
+  bash "$script_dir/src/03.ANI_Metrics.sh" $kmersani $genus $frag_lengths
+  bash "$script_dir/src/04.wraggling.sh" $kmersx $kmersy $my $mx
+  bash "$script_dir/src/05.Graphing.sh" $kmersx $kmersy $my $mx
 else
   if [ "$module" == "ictv" ]; then
-    bash ~/phallett/src/00.ICTV_Metadata_Resource.sh
+    bash "$script_dir/src/00.ICTV_Metadata_Resource.sh"
   elif [ "$module" == "taxa" ]; then
-    bash ~/phallett/src/01.Taxa_Curation_Level.sh $data_default
+    bash "$script_dir/src/01.Taxa_Curation_Level.sh" $data_default
   elif [ "$module" == "file" ]; then
-    bash ~/phallett/src/01B.Selecting_file.sh $file $blastpor $evalue $updatedb
+    bash "$script_dir/src/01B.Selecting_file.sh" $file $blastpor $evalue $updatedb
   elif [ "$module" == "mash" ]; then
-    bash ~/phallett/src/02.Mash_Metrics.sh $kmersmash $genus
+    bash "$script_dir/src/02.Mash_Metrics.sh" $kmersmash $genus
   elif [ "$module" == "ani" ]; then
-    bash ~/phallett/src/03.ANI_Metrics.sh $kmersani $genus $frag_lengths
+    bash "$script_dir/src/03.ANI_Metrics.sh" $kmersani $genus $frag_lengths
   elif [ "$module" == "wraggling" ]; then
-    bash ~/phallett/src/04.wraggling.sh $kmersx $kmersy $my $mx
+    bash "$script_dir/src/04.wraggling.sh" $kmersx $kmersy $my $mx
   elif [ "$module" == "graphs" ]; then
-    bash ~/phallett/src/05.Graphing.sh $kmersx $kmersy $my $mx
+    bash "$script_dir/src/05.Graphing.sh" $kmersx $kmersy $my $mx
   fi
 fi
 
