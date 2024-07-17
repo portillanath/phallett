@@ -1,16 +1,18 @@
 #!/bin/bash
 
 # Create the folder for storing ICTV Metadata
-mkdir -p ~/phallett/data/Virus_Metadata_Resource
+parent_dir=$(dirname "$PWD")
+echo "$parent_dir/phallett"
+mkdir -p "$parent_dir/phallett/data/Virus_Metadata_Resource"
 
 #Delete existing "current" file 
-if [ -f "~/phallett/data/Virus_Metadata_Resource/current" ]; then
-    rm ~/phallett/data/Virus_Metadata_Resource/current
+if [ -f "$parent_dir/phallett/data/Virus_Metadata_Resource/current" ]; then
+    rm "$parent_dir/phallett/data/Virus_Metadata_Resource/current"
 fi
 
 #Download latest current file 
-cd ~/phallett/data/Virus_Metadata_Resource
-wget --no-check-certificate https://ictv.global/vmr/current
+cd "$parent_dir/phallett/data/Virus_Metadata_Resource"
+curl -LO https://ictv.global/vmr/current
 
 #Convert the file to csv
 python3 <<EOF
