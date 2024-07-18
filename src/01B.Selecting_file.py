@@ -7,9 +7,9 @@ import pandas as pd
 from Bio.Blast import NCBIXML
 from Bio import Entrez
 import urllib.error
-from pathlib import Path  # Corrected import statement
+from pathlib import Path  
 
-# Argument parsing
+# Argument parsing options
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument('-file', type=str, help='Path to the fasta file')
 parser.add_argument('-updatedb', type=str, default='False', help='Whether to update the database')

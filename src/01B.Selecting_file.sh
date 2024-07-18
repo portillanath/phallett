@@ -23,6 +23,6 @@ while getopts "fl:bp:e:u" opt; do
   esac
 done
 
-#Now is running 
+#Now running on python
 python3 $parent_dir/phallett/src/01B.Selecting_file.py -file $file -updatedb $updatedb -blastpor $blastpor -evalue $evalue
  
