@@ -7,17 +7,21 @@ import os
 import time
 import pandas as pd
 from Bio import Entrez
+from pathlib import Path
 
 def retrieve_genomes(genera_list):
     # Read the genus or bunch of genera to run
-    ICTV_assignation = pd.read_csv("~/phallett/data/Virus_Metadata_Resource/VMR.csv")
+    current_dir = Path.cwd()
+    parent_dir = current_dir.parent
+    print(parent_dir)
+    ICTV_assignation = pd.read_csv(f"{parent_dir}/phallett/data/Virus_Metadata_Resource/VMR.csv")
     ICTV_assignation = ICTV_assignation.rename(columns=lambda x: x.strip())  # Remove leading/trailing whitespaces
     ICTV_assignation.columns = ["Sort","Isolate_Sort","Realm","Subrealm","Kingdom","Subkingdom","Phylum","Subphylum","Class","Subclass","Order","Suborder","Family","Subfamily","Genus",
 "Subgenus","Species","Exemplar_or_additional_isolate","Virus_name(s)","Virus_name_abbreviation(s)","Virus_isolate_designation","Virus_GENBANK_accession","Virus_REFSEQ_accession",
 "Genome_coverage","Genome_composition","Host_source"]
     ICTV_assignation = ICTV_assignation[(ICTV_assignation["Host_source"] == "archaea") | (ICTV_assignation["Host_source"] == "bacteria")]
     ICTV_assignation = ICTV_assignation[(ICTV_assignation["Genome_coverage"] == "Complete genome") | (ICTV_assignation["Genome_coverage"] == "Complete coding genome")]
-    ICTV_assignation.to_csv("~/phallett/test/ICTV_assignation_Complete.csv", index=False)
+    ICTV_assignation.to_csv(f"{parent_dir}/phallett/test/ICTV_assignation_Complete.csv", index=False)
 
     # Extract accessions for search on NCBI
     accessions = ICTV_assignation["Virus_GENBANK_accession"].unique()
@@ -27,7 +31,7 @@ def retrieve_genomes(genera_list):
     import os
 
 # Creates a folder for storage the selected taxas
-    ncbi_genome_actual = "~/phallett/data/Taxa_Selected"
+    ncbi_genome_actual = f"{parent_dir}/phallett/data/Taxa_Selected"
     ncbi_genome_actual = os.path.expanduser(ncbi_genome_actual)
     os.makedirs(ncbi_genome_actual, exist_ok=True)
 
