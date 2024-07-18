@@ -14,7 +14,7 @@ fi
 cd "$parent_dir/phallett/data/Virus_Metadata_Resource"
 curl -LO https://ictv.global/vmr/current
 
-#Convert the file to csv
+#Convert the file to a csv 
 python3 <<EOF
 import pandas as pd
 df = pd.read_excel('current')
