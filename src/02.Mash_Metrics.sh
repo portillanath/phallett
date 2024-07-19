@@ -19,9 +19,10 @@ while getopts "k:g:" opt;do
 done
 
 # Create variables for paths
-source=~/phallett/data/Taxa_Selected
-mkdir -p ~/phallett/test/Metrics_Results
-outdir=~/phallett/test/Metrics_Results
+parent_dir=$(dirname "$PWD")
+source="$parent_dir/phallett/data/Taxa_Selected"
+mkdir -p"$parent_dir/phallett/test/Metrics_Results"
+outdir="$parent_dir/phallett/test/Metrics_Results"
 
 # Create a list of subdirectories within the working directory
 if [ -n "$genus" ]; then
