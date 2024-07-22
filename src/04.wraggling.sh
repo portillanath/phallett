@@ -7,6 +7,7 @@ kmersy=(7,9,11,12,13)
 kmersx=(12,11,10,9,8)
 my="mash"
 mx="ani"
+parent_dir=$(dirname "$PWD")
 
 while getopts "mx:kmersx:my:kmersy" option; do
     case $option in
@@ -25,7 +26,7 @@ while getopts "mx:kmersx:my:kmersy" option; do
     esac
 done
 
-python3 ~/phallett/src/04.wraggling.py -mx "$mx" -kmersx "$kmersx" -my "$my" -kmersy "$kmersy" > Metrics_Wraggling.log 2>&1
+python3 "$parent_dir/phallett/src/04.wraggling.py" -mx "$mx" -kmersx "$kmersx" -my "$my" -kmersy "$kmersy" > Metrics_Wraggling.log 2>&1
 cat Metrics_Wraggling.log
 
 
