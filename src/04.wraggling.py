@@ -8,11 +8,14 @@ import numpy as np
 from scipy.spatial.distance import pdist
 from scipy.spatial.distance import squareform
 import shutil
+from pathlib import Path  
 
 # Set paths
-source = os.path.expanduser("~/phallett/data/Taxa_Selected")
+current_dir = Path.cwd() 
+parent_dir = current_dir.parent
+source = os.path.expanduser((Path(parent_dir) / "phallett" / "data" / "Taxa_Selected"))
 subdirectories = [d for d in os.listdir(source)]
-workdir = os.path.expanduser("~/phallett/test/Metrics_Results")
+workdir = os.path.expanduser((Path(parent_dir) / "phallett" / "test" / "Metrics_Results"))
 
 # Create output directories
 for genus in subdirectories:
