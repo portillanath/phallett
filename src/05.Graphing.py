@@ -8,9 +8,12 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
+from pathlib import Path 
 
 # Set working directory
-workdir = os.path.expanduser("~/phallett/test/Metrics_Results")
+current_dir = Path.cwd() 
+parent_dir = current_dir.parent
+workdir = os.path.expanduser((Path(parent_dir) / "phallett" / "test" / "Metrics_Results"))
 subdirectories = [os.path.join(workdir, name) for name in os.listdir(workdir) if os.path.isdir(os.path.join(workdir, name))]
 
 import argparse
