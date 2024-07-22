@@ -24,8 +24,9 @@ while getopts "k:f:g:" opt; do
 done
 
 # Create variables for paths
-source=~/phallett/data/Taxa_Selected
-outdir=~/phallett/test/Metrics_Results
+parent_dir=$(dirname "$PWD")
+source="$parent_dir/phallett/data/Taxa_Selected"
+outdir="$parent_dir/phallett/test/Metrics_Results"
 
 cd "$source"
 
