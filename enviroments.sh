@@ -1,6 +1,5 @@
 #!/bin/bash
 # Dependencies Installation
-# All changes are saved now, but not committed
 
 # Function to check the OS and set the appropriate environment YAML file
 detect_os_and_create_env() {
