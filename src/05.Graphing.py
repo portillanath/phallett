@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
+import pathlib as Path 
 
 # Set working directory
 current_dir = Path.cwd() 
