@@ -8,9 +8,9 @@
 1. You must have anaconda or miniconda, if that is not the case follow the next link: 
 https://shorturl.at/ZDEL0
 
-2. Clone this repo: `git clone https://github.com/portillanath/phallett.git 
+2. Clone this repo: `git clone https://github.com/portillanath/phallett.git`
 
-3. Move inside the repo folder: cd phallett
+3. Move inside the repo folder: `cd phallett`
 
 4. Set up depedencies throught conda enviroment `bash enviroments.sh`
 
