@@ -3,8 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns  # Import seaborn for color palettes
 
+from pathlib import Path  
+
 # Set the main directory
-main_directory = "./Blast_Feed"
+current_dir = Path.cwd() 
+parent_dir = current_dir.parent
+main_directory = (Path(parent_dir) / "phallett" / "data" / "Taxa_Selected")
 
 # Initialize empty lists to store genus names and genome counts
 genus_names = []
