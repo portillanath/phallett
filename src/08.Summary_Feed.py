@@ -2,14 +2,12 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns  # Import seaborn for color palettes
-from pathlib import Path  
-
-from pathlib import Path  
+from pathlib import Path    
 
 # Set the main directory
 current_dir = Path.cwd() 
 parent_dir = current_dir.parent
-main_directory = (Path(parent_dir) / "phallett" / "data" / "Taxa_Selected")
+main_directory = (Path(parent_dir) / "data" / "ICTV_database")
 
 # Initialize empty lists to store genus names and genome counts
 genus_names = []
