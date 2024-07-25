@@ -7,7 +7,7 @@ from pathlib import Path
 # Set the main directory
 current_dir = Path.cwd() 
 parent_dir = current_dir.parent
-main_directory = (Path(parent_dir) / "data" / "ICTV_database")
+main_directory = (Path(parent_dir) / "data" / "Taxa_Selected")
 
 # Initialize empty lists to store genus names and genome counts
 genus_names = []
@@ -36,7 +36,7 @@ data_filtered = data[data["Count"] > 10]
 print(data_filtered)
 
 # Set the PDF file path and name
-csv_file_path = "~/phallet/Summary_feed_filtered.csv"
+csv_file_path = (Path(parent_dir)/ "Summary_feed_filtered.csv")
 
 # Save the filtered data as a CSV file
 data_filtered.to_csv(csv_file_path, index=False)
