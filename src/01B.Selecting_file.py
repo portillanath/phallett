@@ -12,20 +12,19 @@ from pathlib import Path
 # Argument parsing options
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument('-file', type=str, help='Path to the fasta file')
-parser.add_argument('-updatedb', type=str, default='False', help='Whether to update the database')
+parser.add_argument('-updatedb', type=str, default='false', help='Whether to update the database')
 parser.add_argument('-blastpor', type=float, help='BLAST percentage identity threshold')
 parser.add_argument('-evalue', type=float, help='BLAST e-value threshold')
 args = parser.parse_args()
 
-# Convert `updatedb` argument to boolean
-updatedb = args.updatedb.lower() == 'true'
-
 print(vars(args))
 
-if updatedb:
-    current_dir = Path.cwd()  # Get the current working directory
-    parent_dir = current_dir.parent
-    ICTV_database = Path(parent_dir) / "phallett" / "data" / "ICTV_database"
+# Define paths before the update check
+current_dir = Path.cwd()  # Get the current working directory
+parent_dir = current_dir.parent
+ICTV_database = Path(parent_dir) / "phallett" / "data" / "ICTV_database"
+
+if args.updatedb.lower() == "true":
     ICTV_database.mkdir(parents=True, exist_ok=True)
     Entrez.email = "na.portilla10@uniandes.edu.co"
     guide_accessions = pd.read_csv(Path(parent_dir) / "phallett" / "data" / "Virus_Metadata_Resource" / "VMR.csv")
@@ -38,7 +37,6 @@ if updatedb:
                     f.write(handle.read())
         except Exception as e:
             print(f"Error al descargar {accession}: {e}. Saltando al siguiente.")
-
 else:
     print("Database not updated")
 
@@ -52,18 +50,21 @@ if args.file:
     print(f"Analysis folder created: {analysis_folder}")
 
     # Read the fasta file
-    file_path = Path(parent_dir) / "phallett" / "GCF_000836945.fasta"
+    file_path = Path(args.file)  # Use the user-provided file path
     fasta_string = file_path.read_text()
     print(fasta_string)
 
     # Format the database
     combined_fasta = Path(parent_dir) / "phallett" / "data" / "ICTV_database_combined.fasta"
-    command = f"cat {ICTV_database}/*.fasta > {combined_fasta}"
-    subprocess.run(command, shell=True)
+    
+    # Check if the ICTV_database folder is empty before concatenating
+    if any(ICTV_database.glob("*.fasta")):
+        command = f"cat {ICTV_database}/*.fasta > {combined_fasta}"
+        subprocess.run(command, shell=True)
 
-    # Create the BLAST database
-    command = f"makeblastdb -in {combined_fasta} -dbtype nucl"
-    subprocess.run(command, shell=True)
+        # Create the BLAST database
+        command = f"makeblastdb -in {combined_fasta} -dbtype nucl"
+        subprocess.run(command, shell=True)
 
     # Save the query fasta file
     fasta_file_name = os.path.basename(args.file)  # Get the original file name
