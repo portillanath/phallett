@@ -20,7 +20,7 @@ args = parser.parse_args()
 print(vars(args))
 
 # Define paths before the update check
-current_dir = Path.cwd()  # Get the current working directory
+current_dir = Path.cwd() 
 parent_dir = current_dir.parent
 ICTV_database = Path(parent_dir) / "phallett" / "data" / "ICTV_database"
 
