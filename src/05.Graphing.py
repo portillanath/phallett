@@ -153,7 +153,7 @@ for genus in subdirectories:
             # Create a custom legend
             handles = [plt.Line2D([0], [0], marker='o', color='w', label='Family >=88.00', markerfacecolor='red', markersize=5),
                        plt.Line2D([0], [0], marker='o', color='w', label='Genus 88.00-94.00', markerfacecolor='orange', markersize=5),
-                       plt.Line2D([0], [0], marker='o', color='w', label='Species >=49.00', markerfacecolor='yellow', markersize=5)]
+                       plt.Line2D([0], [0], marker='o', color='w', label='Species >=94.00', markerfacecolor='yellow', markersize=5)]
             fig.legend(handles=handles, loc='upper right', fontsize=8)
 
             plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1, wspace=0.2, hspace=0.2)
