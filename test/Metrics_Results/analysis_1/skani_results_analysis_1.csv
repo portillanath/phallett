@@ -1,0 +1,5 @@
+GenomeA,GenomeB,ani_distance,kmer_ani,algorithm_ani
+HM071924,HM134276,99.51,static,skani
+HE956709,HE956711,100.00,static,skani
+MH992121,MH992510,97.65,static,skani
+MK234886,MN136198,92.54,static,skani
