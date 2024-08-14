@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#For Memberships analysis 
 parent_dir=$(dirname "$PWD")
 
 # Parse command-line options
