@@ -1,6 +1,13 @@
 import argparse
 import pandas as pd
 from pathlib import Path
+from Bio import SeqIO
+
+def calcualte_genome_size(fasta_file):
+    genome_size=0
+    for record in SeqIO.parse(fasta_file,"fasta"):
+        genome_size+=len(record.seq)
+    return genome_size
 
 def extract_data_from_folders(parent_dir, folder_names):
     # Define the paths
@@ -34,16 +41,23 @@ def extract_data_from_folders(parent_dir, folder_names):
             if file.is_file():
                 # Extract the Virus_GENBANK_accession from the file name
                 virus_accession = file.stem  # Assuming the file name matches the accession number
-                # Find the corresponding row in the VMR DataFrame
-                matching_rows = vmr_df[vmr_df['Virus GENBANK accession'] == virus_accession]
-                
-                # If there are matching rows, add to result_data
-                if not matching_rows.empty:
-                    result_data.append(matching_rows)
+                if file.suffix == '.fasta':
+                   genome_size= calcualte_genome_size(file)
+                   genome_size_info={'Virus GENBANK accession': virus_accession, 'Genome Size':genome_size}
+
+                   #Append to the metada 
+                   if virus_accession in vmr_df['Virus GENBANK accession'].values:
+                      metadata_row= vmr_df[vmr_df['Virus GENBANK accession']==virus_accession].iloc[0].to_dict()
+                      metadata_row.update(genome_size_info)
+                      result_data.append(metadata_row)
+                else:
+                   if virus_accession in vmr_df['Virus GENBANK accession'].values:
+                      metadata_row=vmr_df[vmr_df['Virus GENBANKS accession']==virus_accession].iloc[0].to_dict()
+                      result_data.append(metadata_row)
 
         # Concatenate all collected data into a single DataFrame for the current folder
         if result_data:
-            final_df = pd.concat(result_data, ignore_index=True)
+            final_df = pd.DataFrame(result_data)
             # Define the output file path for the current folder
 
             # Define the output folder path
@@ -68,6 +82,8 @@ def main():
     
     # Call the extraction function
     extract_data_from_folders(args.parent_directory, args.folder_names)
+
+    # Call the mergin function 
 
 if __name__ == "__main__":
     main()
