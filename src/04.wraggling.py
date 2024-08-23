@@ -212,9 +212,6 @@ for subdir in subdirectories_results:
     mash_metrics_result.to_csv(os.path.join(workdir,subdir_name,f"mash_metrics_{subdir_name}.csv"), index=False)
 
 #Create a summary of the metrics to be read as the paiwise relationships
-    ani_metrics_result = ani_metrics_result.reset_index(drop=True)
-    mash_metrics_result = mash_metrics_result.reset_index(drop=True)
-    metrics_summary = pd.concat([ani_metrics_result, mash_metrics_result], axis=1)
-    metrics_summary.rename(columns={metrics_summary.columns[4]: "algorithm_ani"}, inplace=True)
+    metrics_summary= pd.merge(ani_metrics_result, mash_metrics_result, on=['GenomeA', 'GenomeB'], how='inner')
     metrics_summary.to_csv(os.path.join(workdir,subdir_name,f"summary_{subdir_name}.csv"), index=False)
     print(f"Metrics summary for {subdir_name} has been created") 
