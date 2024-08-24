@@ -50,16 +50,29 @@ fi
 # Loop through each subdirectory and create a concatenated folder
 for subdir in "${subdirs[@]}"; do
   genusname=${subdir##*/}
+  fasta_files=("${subdir}"/*.fasta)
   ls -d "${subdir}"/*.fasta > "${genusname}.list"
   mv *.list $outdir
 
   # Now we are going to calculate the ANI value. The file generated is interpreted as:
   # first column Ref_file, Query_file, ANI, Align_fraction_ref, Align_fraction_query, Ref_name, Query_Name
 
-  # This calculates the triangle
-  skani triangle "$source/${genusname}/"*.fasta -E > "skani_distance_${genusname}.txt"
-  mv *.txt $outdir
+  output_file="${outdir}/skani_distance_${genusname}.txt"
+  echo -e "Ref_file\tQuery_file\tANI\tAlign_fraction_ref\tAlign_fraction_query\tRef_name\tQuery_name" > "$output_file"
+  
+  for i in "${!fasta_files[@]}"; do
+    fasta1="${fasta_files[$i]}"
 
+    for j in "${!fasta_files[@]}"; do
+      fasta2="${fasta_files[$j]}"
+
+      echo "Comparing $fasta1 with $fasta2"
+      skani dist "$fasta1" "$fasta2" | tail -n +2 >> "$output_file"
+      skani dist "$fasta2" "$fasta1" | tail -n +2 >> "$output_file"
+    done
+  done
+  mv *.txt $outdir
+  
 for frag_len in "${frag_lengths[@]}"; do
     for k in "${kmers[@]}"; do
        #average_nucleotide_identity.py -i "${subdir_basename}.list" -o "${subdir}/fastani_${subdir_basename}_frag_${frag_len}_${k}" --method ANIb
