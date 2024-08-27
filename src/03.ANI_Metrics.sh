@@ -47,12 +47,11 @@ else
   subdirs=($(find "$source" -mindepth 1 -type d))
 fi
 
-# Loop through each subdirectory and create a concatenated folder
 for subdir in "${subdirs[@]}"; do
   genusname=${subdir##*/}
   fasta_files=("${subdir}"/*.fasta)
   ls -d "${subdir}"/*.fasta > "${genusname}.list"
-  mv *.list $outdir
+  mv *.list "$outdir"
 
   # Now we are going to calculate the ANI value. The file generated is interpreted as:
   # first column Ref_file, Query_file, ANI, Align_fraction_ref, Align_fraction_query, Ref_name, Query_Name
@@ -71,7 +70,12 @@ for subdir in "${subdirs[@]}"; do
       skani dist "$fasta2" "$fasta1" | tail -n +2 >> "$output_file"
     done
   done
-  mv *.txt $outdir
+
+  # Remove exact duplicate rows from the output file using awk
+  awk '!seen[$0]++' "$output_file" > "${output_file}.tmp"
+  mv "${output_file}.tmp" "$output_file"
+
+  mv *.txt "$outdir"
   
 for frag_len in "${frag_lengths[@]}"; do
     for k in "${kmers[@]}"; do
