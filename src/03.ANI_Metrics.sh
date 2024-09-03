@@ -2,7 +2,7 @@
 
 # Default kmer values
 kmers=(12 11 10 9 8)
-frag_lengths=(500)  # Default fragment length
+frag_lengths=(500)  # Default fragment 
 genus=""
 
 while getopts "k:f:g:" opt; do
