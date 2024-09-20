@@ -1,8 +1,12 @@
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns  # Import seaborn for color palettes
-from pathlib import Path    
+import seaborn as sns  
+from pathlib import Path 
+import argparse
+import pandas as pd
+from pathlib import Path
+from Bio import SeqIO
 
 # Set the main directory
 current_dir = Path.cwd() 

@@ -74,3 +74,5 @@ for genus in subdirectories:
         print(f"An error occurred while processing {aai_tsv}: {e}")
         continue
 
+
+
