@@ -75,10 +75,10 @@ if [ -z "$module" ]; then
   bash "$script_dir/src/00.ICTV_Metadata_Resource_Resource.sh"
   bash "$script_dir/src/01A.Taxa_Curation_Level.sh" $data_default
   bash "$script_dir/src/02.Bargenome.sh"
-  bash "$script_dir/src/02.Mash_Metrics.sh" $kmersmash $genus
-  bash "$script_dir/src/03.ANI_Metrics.sh" $kmersani $genus $frag_lengths
-  bash "$script_dir/src/04.wraggling.sh" $kmersx $kmersy $my $mx
-  bash "$script_dir/src/05.Graphing.sh" $kmersx $kmersy $my $mx
+  bash "$script_dir/src/03.ANI_Metrics.sh" $kmersmash $genus
+  bash "$script_dir/src/04.Mash_Metrics.sh" $kmersani $genus $frag_lengths
+  bash "$script_dir/src/05.wraggling.sh" $kmersx $kmersy $my $mx
+  bash "$script_dir/src/06.Graphing.sh" $kmersx $kmersy $my $mx
 else
   if [ "$module" == "ictv" ]; then
     bash "$script_dir/src/00.ICTV_Metadata_Resource.sh"
@@ -88,14 +88,14 @@ else
     bash "$script_dir/src/01B.Selecting_file.sh" $file $blastpor $evalue $updatedb
   elif [ "$module" == "bargenome" ]; then
     bash "$script_dir/src/02.Bargenome.sh"
-  elif [ "$module" == "mash" ]; then
-    bash "$script_dir/src/02.Mash_Metrics.sh" $kmersmash $genus
   elif [ "$module" == "ani" ]; then
-    bash "$script_dir/src/03.ANI_Metrics.sh" $kmersani $genus $frag_lengths
+    bash "$script_dir/src/03.ANI_Metrics.sh" $kmersmash $genus
+  elif [ "$module" == "mash" ]; then
+    bash "$script_dir/src/04.Mash_Metrics.sh" $kmersani $genus $frag_lengths
   elif [ "$module" == "wraggling" ]; then
-    bash "$script_dir/src/04.wraggling.sh" $kmersx $kmersy $my $mx
+    bash "$script_dir/src/05.wraggling.sh" $kmersx $kmersy $my $mx
   elif [ "$module" == "graphs" ]; then
-    bash "$script_dir/src/05.Graphing.sh" $kmersx $kmersy $my $mx
+    bash "$script_dir/src/06.Graphing.sh" $kmersx $kmersy $my $mx
   fi
 fi
 
