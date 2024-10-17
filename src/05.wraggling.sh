@@ -26,7 +26,7 @@ while getopts "mx:kmersx:my:kmersy" option; do
     esac
 done
 
-python3 "$parent_dir/phallett/src/04.wraggling.py" -mx "$mx" -kmersx "$kmersx" -my "$my" -kmersy "$kmersy" > Metrics_Wraggling.log 2>&1
+python3 "$parent_dir/phallett/src/05.wraggling.py" -mx "$mx" -kmersx "$kmersx" -my "$my" -kmersy "$kmersy" > Metrics_Wraggling.log 2>&1
 cat Metrics_Wraggling.log
 
 
