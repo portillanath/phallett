@@ -26,5 +26,5 @@ while getopts "mx:kmersx:my:kmersy" option; do
     esac
 done
 
-python3 "$parent_dir/phallett/src/05.Graphing.py" -mx "$mx" -kmersx "$kmersx" -my "$my" -kmersy "$kmersy" > Graphing.log 2>&1
+python3 "$parent_dir/phallett/src/06.Graphing.py" -mx "$mx" -kmersx "$kmersx" -my "$my" -kmersy "$kmersy" > Graphing.log 2>&1
 cat Graphing.log
