@@ -1,13 +1,10 @@
 import os
-import re
 import glob
 import pandas as pd
-import numpy as np
-import sys
+import argparse
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 from pathlib import Path
-import argparse
 
 # Set working directory
 current_dir = Path.cwd()
@@ -64,9 +61,6 @@ elif mx == "vcontact2":
 metrics = [mx, my]
 
 # Initialize DataFrames
-ani_data = pd.DataFrame()
-mash_data = pd.DataFrame()
-viridic_data = pd.DataFrame()
 mx_data = pd.DataFrame()
 my_data = pd.DataFrame()
 
@@ -107,16 +101,16 @@ for genus in subdirectories:
             kmer_values_my = sorted(pd.unique(df_subset_my[f"kmer_{my}"]))
 
             # Check if kmer_values_my is not empty
-            if not kmer_values_my:
+            if not kmer_values_my or not kmer_values_mx:
                 print(f"No kmer values for {my} with algorithm {algorithm_my} in genus {genus_name}")
                 continue  # Skip to the next iteration
 
             # Create a scatterplot for each kmer combination
-            fig, axes = plt.subplots(len(kmer_values_mx), len(kmer_values_my), figsize=(12, 8), sharex=True)
+            fig, axes = plt.subplots(len(kmer_values_mx), len(kmer_values_my), figsize=(18, 14), sharex=True)
             axes = axes.reshape(len(kmer_values_mx), len(kmer_values_my))
             kmer_values_mx.sort()
-            kmer_values_my.sort(reverse=True)
-            fig.text(0.04, 0.04, algorithm_my, va='center', rotation='vertical')
+            kmer_values_my.sort()
+            fig.text(0.04, 0.04, algorithm_my, va='center', rotation='vertical', fontsize=10)
 
             for j, my_kmer in enumerate(kmer_values_my):
                 for i, mx_kmer in enumerate(kmer_values_mx):
@@ -138,22 +132,25 @@ for genus in subdirectories:
                                 colors.append('yellow')
 
                         ax = axes[i, j]
-                        ax.set_title(f"{algorithm_mx} kmer: {kmer_values_mx[i]}", fontsize=6)
-                        ax.tick_params(axis='both', which='major', labelsize=4)
+                        ax.set_title(f"{algorithm_mx} kmer: {kmer_values_mx[i]}", fontsize=8)
+                        ax.tick_params(axis='both', which='major', labelsize=10)  # Increased label size
 
                         scatter = ax.scatter(merged_df[f"{mx}_distance"], merged_df[f"{my}_distance"],
-                                             c=colors, alpha=0.5, s=0.5)
+                                             c=colors, alpha=0.5, s=1)
 
-                        ax.set_ylabel(f"{algorithm_my} kmer: {kmer_values_my[j]}", rotation=90, ha='center', fontsize=6)
-                        ax.yaxis.set_label_coords(-0.2, 0.5)
+                        ax.set_ylabel(f"{algorithm_my} kmer: {kmer_values_my[j]}", rotation=90, ha='center', fontsize=10)  # Increased font size
+                        ax.yaxis.set_label_coords(-0.25, 0.5)  # Adjusted Y label position
+
+            # Adjust subplot spacing
+            plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1, wspace=0.4, hspace=0.4)
 
             # Create a custom legend
-            handles = [plt.Line2D([0], [0], marker='o', color='w', label='Family >=88.00', markerfacecolor='red', markersize=5),
-                       plt.Line2D([0], [0], marker='o', color='w', label='Genus 88.00-94.00', markerfacecolor='orange', markersize=5),
-                       plt.Line2D([0], [0], marker='o', color='w', label='Species >=94.00', markerfacecolor='yellow', markersize=5)]
-            fig.legend(handles=handles, loc='upper right', fontsize=8)
-
-            plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1, wspace=0.2, hspace=0.2)
+            handles = [
+                plt.Line2D([0], [0], marker='o', color='w', label='Family >=88.00', markerfacecolor='red', markersize=5),
+                plt.Line2D([0], [0], marker='o', color='w', label='Genus 88.00-94.00', markerfacecolor='orange', markersize=5),
+                plt.Line2D([0], [0], marker='o', color='w', label='Species >=94.00', markerfacecolor='yellow', markersize=5)
+            ]
+            fig.legend(handles=handles, loc='upper right', bbox_to_anchor=(1.0, 1.0), fontsize=12, frameon=False)  # Legend in the upper right corner
 
             # Save the current figure to a PDF file if there are valid combinations
             pdf_filename = f"{genus_name}_{algorithm_mx}_{algorithm_my}.pdf"
