@@ -46,6 +46,29 @@ for subdir in "${subdirs[@]}"; do
   # Ensure we are in the correct directory
   cd "$subdir" || { echo "Failed to cd into $subdir"; exit 1; }
 
+  # MASH ALGORITHM
+  # Create a sketch of all the sequences
+  # Use 64-bit hashes and a sketch default of 1000
+  for k in "${kmers[@]}"; do
+    sketch_file="${subdir}/sketch_mash_${subdir_basename}_${k}"
+    if ls ${subdir}/*.fasta 1> /dev/null 2>&1; then
+    mash sketch -k ${k} -o ${sketch_file} ${subdir}/*.fasta
+    echo "The sketching is complete for $subdir_basename with kmer $k"
+    # Calculate mash distance with the sketches
+    if [ -f "${sketch_file}.msh" ]; then
+      mash dist ${sketch_file}.msh ${sketch_file}.msh > ${subdir}/mash_distance_${subdir_basename}_k${k}.tab
+      echo "The matrix distance is calculated for $subdir_basename with kmer $k"
+    else
+      echo "Sketch file ${sketch_file}.msh does not exist"
+    fi
+    else
+      echo "No fasta files found in ${subdir}"
+    fi
+  done
+
+  mv sketch* $outdir
+  mv *.tab $outdir
+
   # Generate Sourmash signatures for each k-mer size
   for k in "${kmers[@]}"; do
     echo "Running sourmash sketch for k-mer size ${k}"
