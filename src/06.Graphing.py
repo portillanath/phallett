@@ -103,9 +103,9 @@ for genus in subdirectories:
                 print(f"No kmer values for {my} with algorithm {algorithm_my} in genus {genus_name}")
                 continue
 
-            fig, axes = plt.subplots(len(kmer_values_mx), len(kmer_values_my), figsize=(18, 14), sharex=True)
+            fig, axes = plt.subplots(len(kmer_values_mx), len(kmer_values_my), figsize=(13, 9), sharex=True)
             axes = axes.reshape(len(kmer_values_mx), len(kmer_values_my))
-            fig.text(0.04, 0.04, algorithm_my, va='center', rotation='vertical', fontsize=10)
+            fig.text(0.04, 0.04, algorithm_my, va='center', rotation='vertical', fontsize=9)
 
             for j, my_kmer in enumerate(kmer_values_my):
                 for i, mx_kmer in enumerate(kmer_values_mx):
@@ -127,8 +127,8 @@ for genus in subdirectories:
                                 colors.append('pink')
 
                         ax = axes[i, j]
-                        ax.set_title(f"{algorithm_mx} kmer: {kmer_values_mx[i]}", fontsize=8)
-                        ax.tick_params(axis='both', which='major', labelsize=10)
+                        ax.set_title(f"{algorithm_mx} kmer: {kmer_values_mx[i]}", fontsize=9)
+                        ax.tick_params(axis='both', which='major', labelsize=9)
 
                         scatter = ax.scatter(merged_df[f"{mx}_distance"], merged_df[f"{my}_distance"],
                                              c=colors, alpha=0.5, s=1)
@@ -137,13 +137,12 @@ for genus in subdirectories:
                         ax.yaxis.set_label_coords(-0.25, 0.5)
 
             plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1, wspace=0.4, hspace=0.4)
-
             handles = [
-                plt.Line2D([0], [0], marker='o', color='w', label='Family >=88.00', markerfacecolor='red', markersize=5),
-                plt.Line2D([0], [0], marker='o', color='w', label='Genus 88.00-94.00', markerfacecolor='orange', markersize=5),
-                plt.Line2D([0], [0], marker='o', color='w', label='Species >=94.00', markerfacecolor='pink', markersize=5)
+                plt.Line2D([0], [0], marker='o', color='w', label='Family >=88.00', markerfacecolor='red', markersize=7),
+                plt.Line2D([0], [0], marker='o', color='w', label='Genus 88.00-94.00', markerfacecolor='orange', markersize=7),
+                plt.Line2D([0], [0], marker='o', color='w', label='Species >=94.00', markerfacecolor='pink', markersize=7)
             ]
-            fig.legend(handles=handles, loc='upper right', bbox_to_anchor=(1.0, 1.0), fontsize=12, frameon=False)
+            fig.legend(handles=handles, loc='upper right', bbox_to_anchor=(1.0, 1.0), fontsize=9, frameon=False)
 
             pdf_filename = f"{genus_name}_{algorithm_mx}_{algorithm_my}.pdf"
             print(f"Saving PDF: {pdf_filename}")
