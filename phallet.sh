@@ -96,6 +96,8 @@ else
     bash "$script_dir/src/05.wraggling.sh" $kmersx $kmersy $my $mx
   elif [ "$module" == "graphs" ]; then
     bash "$script_dir/src/06.Graphing.sh" $kmersx $kmersy $my $mx
+  elif [ "$module"== "boxplot" ]; then
+    bash "$script_dir/src/07.Summary_Feed.sh" 
   fi
 fi
 
