@@ -70,7 +70,7 @@ while getopts "d:m:g:ka:km:f:ky:kx:my:mx:fl:u:b:e" opt; do
   esac
 done
 
-#Run phallet steps with flags
+#Run phallet steps as default 
 if [ -z "$module" ]; then
   bash "$script_dir/src/00.ICTV_Metadata_Resource_Resource.sh"
   bash "$script_dir/src/01A.Taxa_Curation_Level.sh" $data_default
