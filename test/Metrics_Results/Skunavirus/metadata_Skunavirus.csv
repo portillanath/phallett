@@ -1,0 +1,95 @@
+Sort,Isolate Sort,Realm,Subrealm,Kingdom,Subkingdom,Phylum,Subphylum,Class,Subclass,Order,Suborder,Family,Subfamily,Genus,Subgenus,Species,Exemplar or additional isolate,Virus name(s),Virus name abbreviation(s),Virus isolate designation,Virus GENBANK accession,Virus REFSEQ accession,Genome coverage,Genome composition,Host source,Genome Size
+4767,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv79201,E,Lactococcus phage 79201,,,MF448568,NC_049411,Complete genome,dsDNA,bacteria,31123
+4756,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv38503,E,Lactococcus phage 38503,,,MF448558,NC_049401,Complete genome,dsDNA,bacteria,27948
+4725,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus MV10L,E,Lactococcus phage MV10L,,,MK301440,NC_049447,Complete genome,dsDNA,bacteria,31374
+4763,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv62601,E,Lactococcus phage 62601,,,MF448564,NC_049407,Complete genome,dsDNA,bacteria,30852
+4707,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus i0139,E,Lactococcus phage i0139,,,KX379665,NC_049375,Complete genome,dsDNA,bacteria,29513
+4745,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv340,E,Lactococcus phage 340,,,KC182542,NC_021853,Complete genome,dsDNA,bacteria,32337
+4695,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CHPC52,E,Lactococcus phage CHPC52,,,MN689519,NC_049483,Complete genome,dsDNA,bacteria,29652
+4699,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CHPC781,E,Lactococcus phage CHPC781,,,MN689520,NC_049484,Complete genome,dsDNA,bacteria,29218
+4700,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CHPC958,E,Lactococcus phage CHPC958,,,MN689522,NC_049485,Complete genome,dsDNA,bacteria,32653
+4736,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus Sl4,E,Lactococcus phage SL4,,,FJ848881,NC_028900,Complete genome,dsDNA,bacteria,28144
+4709,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus jm2,E,Lactococcus phage jm2,,,KC182546,NC_021860,Complete genome,dsDNA,bacteria,31090
+4711,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus L6,E,Lactococcus phage 936 group phage PhiL.6,,,KP793122,NC_049361,Complete genome,dsDNA,bacteria,31181
+4729,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus P656,E,Lactococcus phage P656,,,MN552149,NC_049475,Complete genome,dsDNA,bacteria,28396
+4733,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus R31,E,Lactococcus phage R31,,,KY554761,NC_049381,Complete genome,dsDNA,bacteria,27203
+4714,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus LP0209,E,Lactococcus phage LP0209,,,MF775693,NC_049422,Complete genome,dsDNA,bacteria,30339
+4682,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus ASCC273,E,Lactococcus phage ASCC273,,,JQ740788,NC_017695,Complete genome,dsDNA,bacteria,32582
+4712,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus L18,E,Lactococcus phage 936 group phage PhiL.18,,,KP793120,NC_049359,Complete genome,dsDNA,bacteria,30882
+4768,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv88605,E,Lactococcus phage 88605,,,MF448569,NC_049412,Complete genome,dsDNA,bacteria,31508
+4727,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus p272,E,Lactococcus lactis phage p272,,,KC182549,NC_049348,Complete genome,dsDNA,bacteria,30778
+4689,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus bIBBF12,E,Lactococcus phage vB_Llc_bIBBF12,,,MG253652,NC_049426,Complete genome,dsDNA,bacteria,29454
+4769,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv8V08,E,Lactococcus phage 8V08,,,MK301438,NC_049446,Complete genome,dsDNA,bacteria,32312
+4723,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus M1127,E,Lactococcus phage 936 group phage PhiM1127,,,KP793132,NC_049368,Complete genome,dsDNA,bacteria,32682
+4697,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CHPC361,E,Lactococcus phage CHPC361,,,MN689517,NC_049481,Complete genome,dsDNA,bacteria,30162
+4752,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv13W11L,E,Lactococcus phage 13W11L,,,KX379671,NC_049377,Complete genome,dsDNA,bacteria,29952
+4766,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv66901,E,Lactococcus phage 66901,,,MF448567,NC_049410,Complete genome,dsDNA,bacteria,28917
+4721,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus LP9908,E,Lactococcus phage LP9908,,,MF775686,NC_049421,Complete genome,dsDNA,bacteria,29668
+4690,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus bIL170,E,Lactococcus phage bIL170,,,AF009630,NC_001909,Complete genome,dsDNA,bacteria,31754
+4758,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv3R16S,E,Lactococcus phage 3R16S,,,KX379666,NC_049376,Complete genome,dsDNA,bacteria,30446
+4696,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CHPC129,E,Lactococcus phage CHPC129,,,MN689514,NC_049480,Complete genome,dsDNA,bacteria,30832
+4704,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus E1127,E,Lactococcus phage 936 group phage PhiE1127,,,KP793131,NC_049367,Complete genome,dsDNA,bacteria,32270
+4749,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv05601,E,Lactococcus phage 05601,,,MF448554,NC_049397,Complete genome,dsDNA,bacteria,32895
+4731,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus P1532,E,Lactococcus phage P1532,,,MN552148,NC_049474,Complete genome,dsDNA,bacteria,29075
+4744,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv193,E,Lactococcus phage 936 group phage Phi19.3,,,KP793105,NC_049356,Complete genome,dsDNA,bacteria,28811
+4701,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CHPC959,E,Lactococcus phage CHPC959,,,MN689523,NC_049486,Complete genome,dsDNA,bacteria,29340
+4693,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CB14,E,Lactococcus phage CB14,,,FJ848883,NC_013152,Complete genome,dsDNA,bacteria,29459
+4757,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv38507,E,Lactococcus phage 38507,,,MF448559,NC_049402,Complete genome,dsDNA,bacteria,32458
+4770,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv91127,E,Lactococcus phage 936 group phage Phi91127,,,KP793125,NC_049364,Complete genome,dsDNA,bacteria,31495
+4718,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus LP9404,E,Lactococcus phage LP9404,,,MF775678,NC_049418,Complete genome,dsDNA,bacteria,30072
+4687,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus bibb29,E,Lactococcus phage bIBB29,,,EU221285,NC_011046,Complete genome,dsDNA,bacteria,29305
+4730,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus P680,E,Lactococcus phage P680,,,KC182551,NC_021852,Complete genome,dsDNA,bacteria,29631
+4698,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CHPC362,E,Lactococcus phage CHPC362,,,MN689518,NC_049482,Complete genome,dsDNA,bacteria,27642
+4743,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv155,E,Lactococcus phage 936 group phage Phi155,,,KP793130,NC_049366,Complete genome,dsDNA,bacteria,32150
+4726,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus P008,E,Lactococcus phage P008,,,DQ054536,NC_008363,Complete genome,dsDNA,bacteria,28538
+4754,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv30804,E,Lactococcus phage 30804,,,MF448556,NC_049399,Complete genome,dsDNA,bacteria,30401
+4688,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus bIBB5g1,E,Lactococcus phage vB_Llc_bIBB5g1,,,MG253647,NC_049425,Complete genome,dsDNA,bacteria,30132
+4692,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CB13,E,Lactococcus phage CB13,,,FJ848882,NC_013155,Complete genome,dsDNA,bacteria,32182
+4765,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv63302,E,Lactococcus phage 63302,,,MF448566,NC_049409,Complete genome,dsDNA,bacteria,31883
+4703,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CHPC965,E,Lactococcus phage CHPC965,,,MN689525,NC_049488,Complete genome,dsDNA,bacteria,25327
+4737,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv7,E,Lactococcus phage phi7,,,KC182552,NC_021855,Complete genome,dsDNA,bacteria,32382
+4740,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv44,E,Lactococcus phage 936 group phage Phi44,,,KP793124,NC_049363,Complete genome,dsDNA,bacteria,31379
+4762,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv57001,E,Lactococcus phage 57001,,,MF448563,NC_049406,Complete genome,dsDNA,bacteria,31819
+4684,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus ASCC465,E,Lactococcus phage ASCC465,,,JQ740804,NC_017698,Complete genome,dsDNA,bacteria,31772
+4702,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CHPC964,E,Lactococcus phage CHPC964,,,MN689524,NC_049487,Complete genome,dsDNA,bacteria,29925
+4746,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv512,E,Lactococcus phage 936 group phage Phi5.12,,,KP793108,NC_049357,Complete genome,dsDNA,bacteria,29026
+4753,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv16W23,E,Lactococcus phage 16W23,,,KX346249,NC_049373,Complete genome,dsDNA,bacteria,32477
+4773,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv96603,E,Lactococcus phage 96603,,,MF448572,NC_049415,Complete genome,dsDNA,bacteria,30690
+4772,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv96403,E,Lactococcus phage 96403,,,MF448571,NC_049414,Complete genome,dsDNA,bacteria,26874
+4750,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv16802,E,Lactococcus phage 16802,,,MF448555,NC_049398,Complete genome,dsDNA,bacteria,28721
+4722,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus LP1502a,E,Lactococcus phage LP1502a,,,MF775703,NC_049424,Complete genome,dsDNA,bacteria,30247
+4771,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv96401,E,Lactococcus phage 96401,,,MF448570,NC_049413,Complete genome,dsDNA,bacteria,29306
+4686,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus B1127,E,Lactococcus phage 936 group phage PhiB1127,,,KP793104,NC_049355,Complete genome,dsDNA,bacteria,28785
+4742,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv145,E,Lactococcus phage phi145,,,KM091444,NC_049353,Complete genome,dsDNA,bacteria,30862
+4720,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus LP9903,E,Lactococcus phage LP9903,,,MF775685,NC_049420,Complete genome,dsDNA,bacteria,29557
+4724,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus MP1,E,Lactococcus phage MP1,,,MG779474,NC_049434,Complete genome,dsDNA,bacteria,32575
+4755,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv37201,E,Lactococcus phage 37201,,,MF448557,NC_049400,Complete genome,dsDNA,bacteria,30989
+4691,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus caseusJM1,E,Lactococcus phage CaseusJM1,,,KC522412,NC_049351,Complete genome,dsDNA,bacteria,30692
+4747,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv712,E,Lactococcus phage 712,,,DQ227763,NC_008370,Complete genome,dsDNA,bacteria,30510
+4728,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus P475,E,Lactococcus lactis phage P475,,,KC182550,NC_049349,Complete genome,dsDNA,bacteria,30961
+4681,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus ASCC191,E,Lactococcus phage ASCC191,,,JQ740787,NC_017688,Complete genome,dsDNA,bacteria,32414
+4761,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv56301,E,Lactococcus phage 56301,,,MF448562,NC_049405,Complete genome,dsDNA,bacteria,32555
+4764,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv62605,E,Lactococcus phage 62605,,,MF448565,NC_049408,Complete genome,dsDNA,bacteria,31014
+4760,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv56003,E,Lactococcus phage 56003,,,MF448561,NC_049404,Complete genome,dsDNA,bacteria,30926
+4719,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus LP9609,E,Lactococcus phage LP9609,,,MF775682,NC_049419,Complete genome,dsDNA,bacteria,30945
+4680,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus A16,E,Lactococcus phage 936 group phage PhiA.16,,,KP793102,NC_049354,Complete genome,dsDNA,bacteria,28349
+4716,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus LP8511,E,Lactococcus phage LP8511,,,MF775669,NC_049416,Complete genome,dsDNA,bacteria,29953
+4739,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv42,E,Lactococcus phage 936 group phage Phi4.2,,,KP793123,NC_049362,Complete genome,dsDNA,bacteria,31375
+4685,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus ASCC532,E,Lactococcus phage ASCC532,,,JQ740813,NC_017696,Complete genome,dsDNA,bacteria,32384
+4734,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus S0139,E,Lactococcus phage 936 group phage PhiS0139,,,KP793134,NC_049370,Complete genome,dsDNA,bacteria,30116
+4715,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus LP0903,E,Lactococcus phage LP0903,,,MF775698,NC_049423,Complete genome,dsDNA,bacteria,31049
+4735,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sk1,E,Lactococcus phage sk1,,,AF011378,NC_001835,Complete genome,dsDNA,bacteria,28451
+4759,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv51701,E,Lactococcus phage 51701,,,MF448560,NC_049403,Complete genome,dsDNA,bacteria,32529
+4732,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus P4565,E,Lactococcus phage P4565,,,MN552150,NC_049476,Complete genome,dsDNA,bacteria,32697
+4748,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv936,E,Lactococcus phage 936,,,KC182544,NC_049346,Complete genome,dsDNA,bacteria,27302
+4717,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus LP9207,E,Lactococcus phage LP9207,,,MF775676,NC_049417,Complete genome,dsDNA,bacteria,29203
+4706,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus fd13,E,Lactococcus phage fd13,,,KC182545,NC_049347,Complete genome,dsDNA,bacteria,30674
+4710,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus jm3,E,Lactococcus phage jm3,,,KC182547,NC_021854,Complete genome,dsDNA,bacteria,28674
+4751,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv10W18,E,Lactococcus phage 10W18,,,KX379664,NC_049374,Complete genome,dsDNA,bacteria,32393
+4713,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus Lj,E,Lactococcus phage 936 group phage PhiLj,,,KP793133,NC_049369,Complete genome,dsDNA,bacteria,28983
+4741,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv109,E,Lactococcus phage 936 group phage Phi109,,,KP793121,NC_049360,Complete genome,dsDNA,bacteria,31033
+4708,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus JF1,E,Lactococcus phage 936 group phage PhiJF1,,,KP793129,NC_049365,Complete genome,dsDNA,bacteria,31901
+4738,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus sv15,E,Lactococcus phage phi15,,,KM091442,NC_049352,Complete genome,dsDNA,bacteria,31945
+4694,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus CB19,E,Lactococcus phage CB19,,,FJ848884,NC_013153,Complete genome,dsDNA,bacteria,28643
+4705,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus F0139,E,Lactococcus phage 936 group phage PhiF0139,,,KP793118,NC_049358,Complete genome,dsDNA,bacteria,30811
+4683,1,Duplodnaviria,,Heunggongvirae,,Uroviricota,,Caudoviricetes,,,,,,Skunavirus,,Skunavirus ASCC281,E,Lactococcus phage ASCC281,,,JQ740789,NC_017702,Complete genome,dsDNA,bacteria,32023
